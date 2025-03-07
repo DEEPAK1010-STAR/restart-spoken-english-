@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESTART SPOKEN ENGLISH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: linear-gradient(90deg, #ff9a9e, #fad0c4); color: #fff; }
+        header { background: linear-gradient(90deg, #ff512f, #dd2476); color: white; padding: 20px; text-align: center; font-size: 32px; font-weight: 700; }
+        section { padding: 40px; text-align: center; }
+        .button { background: linear-gradient(90deg, #00c6ff, #0072ff); color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-size: 18px; display: inline-block; transition: 0.3s; border: none; cursor: pointer; }
+        .button:hover { background: linear-gradient(90deg, #0072ff, #00c6ff); }
+        .hero { background: url('https://source.unsplash.com/1600x900/?learning,education') no-repeat center center/cover; height: 400px; display: flex; align-items: center; justify-content: center; color: white; font-size: 36px; font-weight: bold; text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7); }
+        .container { max-width: 1100px; margin: auto; }
+        .card { background: rgba(255, 255, 255, 0.8); padding: 20px; border-radius: 15px; box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); margin-bottom: 20px; transition: 0.3s; backdrop-filter: blur(10px); color: #222; }
+        .card:hover { transform: scale(1.05); background: #ffe4b5; }
+        .footer { background: #222; color: white; padding: 20px; text-align: center; font-size: 18px; }
+        .hidden { display: none; }
+        h3 { color: #ff4500; }
+        ul { list-style-type: none; padding: 0; }
+        ul li { background: #ffefba; padding: 12px; margin: 8px 0; border-radius: 8px; color: #333; font-weight: bold; }
+    </style>
+    <script>
+        let currentTense = 0;
+        function showNextTense() {
+            const allTenses = document.querySelectorAll('.tense-card');
+            if (currentTense < allTenses.length - 1) {
+                allTenses[currentTense].classList.add('hidden');
+                currentTense++;
+                allTenses[currentTense].classList.remove('hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Restart Spoken English Logo" style="height: 80px; display: block; margin: auto;">
+        RESTART SPOKEN ENGLISH
+    </header>
+    
+    <div class="hero">Master Your English Communication Skills</div>
+    
+    <section class="container" id="tense-notes">
+        <div class="card tense-card">
+            <h2>Understanding Tenses</h2>
+            <p>Tenses indicate the time of an action. There are 12 types of tenses:</p>
+        </div>
+        
+        <div class="card tense-card">
+            <h3>1. Simple Present</h3>
+            <ul>
+                <li><strong>Affirmative:</strong> She writes a letter.</li>
+                <li><strong>Negative:</strong> She does not write a letter.</li>
+                <li><strong>Interrogative:</strong> Does she write a letter?</li>
+            </ul>
+            <button class="button" onclick="showNextTense()">Next</button>
+        </div>
+        
+        <div class="card tense-card hidden">
+            <h3>2. Present Continuous</h3>
+            <ul>
+                <li><strong>Affirmative:</strong> She is writing a letter.</li>
+                <li><strong>Negative:</strong> She is not writing a letter.</li>
+                <li><strong>Interrogative:</strong> Is she writing a letter?</li>
+            </ul>
+            <button class="button" onclick="showNextTense()">Next</button>
+        </div>
+        
+        <div class="card tense-card hidden">
+            <h3>3. Present Perfect</h3>
+            <ul>
+                <li><strong>Affirmative:</strong> She has written a letter.</li>
+                <li><strong>Negative:</strong> She has not written a letter.</li>
+                <li><strong>Interrogative:</strong> Has she written a letter?</li>
+            </ul>
+            <button class="button" onclick="showNextTense()">Next</button>
+        </div>
+            <div class="card tense-card hidden">
+            <h3>4. Present Perfect Continuous</h3>
+            <ul>
+                <li><strong>Affirmative:</strong> She has been writing a letter.</li>
+                <li><strong>Negative:</strong> She has not been writing a letter.</li>
+                <li><strong>Interrogative:</strong> Has she been writing a letter?</li>
+            </ul>
+            <button class="button" onclick="showNextTense()">Next</button>
+        </div>
+        
+        <div class="card tense-card hidden">
+            <h3>5. Simple Past</h3>
+            <ul>
+                <li><strong>Affirmative:</strong> She wrote a letter.</li>
+                <li><strong>Negative:</strong> She did not write a letter.</li>
+                <li><strong>Interrogative:</strong> Did she write a letter?</li>
+            </ul>
+            <button class="button" onclick="showNextTense()">Next</button>
+        </div>
+        
+        <div class="card tense-card hidden">
+            <h3>6. Past Continuous</h3>
+            <ul>
+                <li><strong>Affirmative:</strong> She was writing a letter.</li>
+                <li><strong>Negative:</strong> She was not writing a letter.</li>
+                <li><strong>Interrogative:</strong> Was she writing a letter?</li>
+            </ul>
+            <button class="button" onclick="showNextTense()">Next</button>
+        </div>
+        
+        <div class="card tense-card hidden">
+            <h3>7. Past Perfect</h3>
+            <ul>
+                <li><strong>Affirmative:</strong> She had written a letter.</li>
+                <li><strong>Negative:</strong> She had not written a letter.</li>
+                <li><strong>Interrogative:</strong> Had she written a letter?</li>
+            </ul>
+            <button class="button" onclick="showNextTense()">Next</button>
+        </div>
+        
+        <div class="card tense-card hidden">
+            <h3>8. Past Perfect Continuous</h3>
+            <ul>
+                <li><strong>Affirmative:</strong> She had been writing a letter.</li>
+                <li><strong>Negative:</strong> She had not been writing a letter.</li>
+                <li><strong>Interrogative:</strong> Had she been writing a letter?</li>
+            </ul>
+            <button class="button" onclick="showNextTense()">Next</button>
+        </div>
+        
+        <div class="card tense-card hidden">
+            <h3>9. Simple Future</h3>
+            <ul>
+                <li><strong>Affirmative:</strong> She will write a letter.</li>
+                <li><strong>Negative:</strong> She will not write a letter.</li>
+                <li><strong>Interrogative:</strong> Will she write a letter?</li>
+            </ul>
+            <button class="button" onclick="showNextTense()">Next</button>
+        </div>
+        
+        <div class="card tense-card hidden">
+            <h3>10. Future Continuous</h3>
+            <ul>
+                <li><strong>Affirmative:</strong> She will be writing a letter.</li>
+                <li><strong>Negative:</strong> She will not be writing a letter.</li>
+                <li><strong>Interrogative:</strong> Will she be writing a letter?</li>
+            </ul>
+            <button class="button" onclick="showNextTense()">Next</button>
+        </div>
+        
+        <div class="card tense-card hidden">
+            <h3>11. Future Perfect</h3>
+            <ul>
+                <li><strong>Affirmative:</strong> She will have written a letter.</li>
+                <li><strong>Negative:</strong> She will not have written a letter.</li>
+                <li><strong>Interrogative:</strong> Will she have written a letter?</li>
+            </ul>
+            <button class="button" onclick="showNextTense()">Next</button>
+        </div>
+        
+        <div class="card tense-card hidden">
+            <h3>12. Future Perfect Continuous</h3>
+            <ul>
+                <li><strong>Affirmative:</strong> She will have been writing a letter.</li>
+                <li><strong>Negative:</strong> She will not have been writing a letter.</li>
+                <li><strong>Interrogative:</strong> Will she have been writing a letter?</li>
+            </ul>
+        </div>
+    </section>
+    
+    <div class="footer">© 2025 RESTART SPOKEN ENGLISH | All Rights Reserved</div>
+</body>
+</html>
